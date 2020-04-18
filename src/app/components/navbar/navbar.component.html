@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#22304D">
+    <a class="navbar-brand" routerLink="/">
+        <img src="assets/LogoUNA.png" width="80px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-link">
+                <a class="nav-link text-white" routerLink="" (click)="CrearNuevoHorario()">
+                    <i class="fas fa-calendar"></i> Nuevo horario
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="nav-link dropdown-toggle text-white" routerLink="" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-save "></i>Guardar
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="" (click)="export()">
+                        <i class="fas fa-file-export"></i> Exportar como hoja de calculo</a>
+                    <a class="dropdown-item btn" (click)="GuardarHorarioGoogle()" *ngIf="user!=null">
+                        <i class="fas fa-save "></i> Guardar en tu cuenta</a>
+                </div>
+            </li>
+            <li class="nav-link">
+                <a class="nav-link text-white " routerLink="" (click)="informacion()">
+                    <i class="fas fa-info"></i> Información
+                </a>
+            </li>
+            <li class="nav-link"  *ngIf="user">
+                <a class="nav-link text-white" routerLink="" (click)="ObtenerHorarios()" data-toggle="modal"
+                    data-target="#exampleModal">
+                    <i class="far fa-calendar-times"></i>Horarios Guardados
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf="!user">
+                <a class="nav-link text-white" data-toggle="tooltip" (click)="signInWithGoogle()" routerLink="">
+                    <i class="fab fa-google"> </i> Iniciar Sesión
+                </a>
+            </li>
+            <li class="nav-item dropdownbtn-group dropleft" *ngIf="user">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img src="{{ user.photoUrl }}" class="rounded-circle" width="40px">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item disabled">
+                        <i class="far fa-user-circle"></i>{{user.name}}</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" data-toggle="tooltip" (click)="signOut()" routerLink="" *ngIf="user">
+                        <i class="fas fa-sign-out-alt"></i>LOGOUT
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">Horarios Guardados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Ver</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let h of datos">
+                                <td> {{h.hora}}</td>
+                                <td>
+                                    <button (click)="Ver(h)"
+                                        class="btn-edit btn btn-block btn-outline-primary"><strong>Ver</strong></button>
+                                </td>
+                                <td>
+                                    <button (click)="Eliminar(h)"
+                                        class="btn-edit btn btn-block btn-outline-danger"><strong>Eliminar</strong></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="my-5"></div>

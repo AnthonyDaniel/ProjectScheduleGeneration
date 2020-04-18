@@ -1,0 +1,632 @@
+<div class="container">
+    <div class="card card-body" style="background-color:#CC071E">
+        <form class="form" #Confirm=ngForm>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="inputState" class="text-white text-center">Asignatura</label>
+                            <input type="text" class="form-control" name="asignatura" [(ngModel)]="asignatura"
+                                placeholder="" required>
+                            <label for="inputState2" class="text-white text-center">Color</label>
+                            <select id="inputState2"  name="hora_final" [(ngModel)]="color" class="form-control"
+                                required>
+                                <option disabled></option>
+                                <option class="" (click)="Color()" style="background-color:rgb(58, 6, 82); color: rgb(58, 6, 82);">rgb(58,6,82)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(95, 8, 19); color:rgb(95, 8, 19)">rgb(95,8,19)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(11, 97, 30); color: rgb(11, 97, 30)">rgb(11,97,30)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(119, 52, 8); color: rgb(119, 52, 8)">rgb(119,52,8)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(173, 156, 0); color: rgb(173, 156, 0);">rgb(173,156,0)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(28, 27, 31); color:rgb(28, 27, 31);  ">rgb(28,27,31)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(66, 17, 17); color:rgb(66, 17, 17);">rgb(66, 17, 17)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(5, 30, 175); color:rgb(5, 30, 175);">rgb(5, 30, 175)
+                                </option>
+                                <option class="" (click)="Color()" style="background-color:rgb(255, 0, 13); color:rgb(255, 0, 13);">rgb(255, 0, 13)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 table-responsive-sm p-auto m-auto">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="row" style="background-color:#22304D">
+                                    <label class="form-check-label text-white" for="inlineCheckbox1">L</label>
+                                </th>
+                                <th scope="row" style="background-color:#22304D">
+                                    <label class="form-check-label text-white" for="inlineCheckbox2">M</label>
+                                </th>
+                                <th scope="row" style="background-color:#22304D">
+                                    <label class="form-check-label text-white" for="inlineCheckbox3">I</label>
+                                </th>
+                                <th scope="row" style="background-color:#22304D">
+                                    <label class="form-check-label text-white" for="inlineCheckbox1">J</label>
+                                </th>
+                                <th scope="row" style="background-color:#22304D">
+                                    <label class="form-check-label text-white" for="inlineCheckbox2">V</label>
+                                </th>
+                                <th scope="row" style="background-color:#22304D">
+                                    <label class="form-check-label text-white" for="inlineCheckbox3">S</label>
+                                </th>
+                                <th scope="row" style="background-color:#22304D">
+                                    <label class="form-check-label text-white" for="inlineCheckbox1">D</label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="background-color:#22304D">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="seleccionarLunes">
+                                        <label class="custom-control-label" for="seleccionarLunes"></label>
+                                    </div>
+                                </th>
+                                <th style="background-color:#22304D">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="seleccionarMartes">
+                                        <label class="custom-control-label" for="seleccionarMartes"></label>
+                                    </div>
+                                </th>
+                                <th style="background-color:#22304D">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="seleccionarMiercoles">
+                                        <label class="custom-control-label" for="seleccionarMiercoles"></label>
+                                    </div>
+                                </th>
+                                <th style="background-color:#22304D">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="selccionarJueves">
+                                        <label class="custom-control-label" for="selccionarJueves"></label>
+                                    </div>
+                                </th>
+                                <th style="background-color:#22304D">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="seleccionaViernes">
+                                        <label class="custom-control-label" for="seleccionaViernes"></label>
+                                    </div>
+                                </th>
+                                <th style="background-color:#22304D">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="selccionarSabado">
+                                        <label class="custom-control-label" for="selccionarSabado"></label>
+                                    </div>
+                                </th>
+                                <th style="background-color:#22304D">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="seleccionarDomingo">
+                                        <label class="custom-control-label" for="seleccionarDomingo"></label>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xl-3">
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <label for="inicio" class="text-white">Desde</label>
+                            <select id="inicio" name="hora_inicio" [(ngModel)]="hora_inicio" class="form-control"
+                                required>
+                                <option value="{{p.h}}" *ngFor="let p of horaInicio">{{p.h}}:00</option>
+                            </select>
+                            <label for="final" class="text-white">Hasta</label>
+                            <select id="final" name="hora_final" [(ngModel)]="hora_final" class="form-control" required>
+                                <option value="{{p.h}}" *ngFor="let p of horaFinal">{{p.h}}:50</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 row justify-content-center text-center p-auto m-auto">
+                    <button type="submit" class="text-white text-center justify-content-center"
+                        style="background-color:#22304D; color:white" class="btn btn-block" [disabled]="!Confirm.valid"
+                        *ngIf="hora_final!=null" (click)="AgregarAsignatura()">Agregar</button>
+                    <button class="text-white text-center justify-content-center"
+                        style="background-color:#22304D; color:white" class="btn btn-block" disabled
+                        *ngIf="hora_final==null ">Agregar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="uk-overflow-auto">
+    <table class="uk-table">
+        <thead>
+            <tr>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">H
+                </th>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">L
+                </th>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">M
+                </th>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">I
+                </th>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">J
+                </th>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">V
+                </th>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">S
+                </th>
+                <th scope="col" class="text-center text-white text-break" style="background-color:#CC071E; width: 100px !important;">D
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">06:00-06:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,6)" class="celda" id="06">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[0].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,6)" class="celda" id="16">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[0].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,6)" class="celda" id="26">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[0].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,6)" class="celda" id="36">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[0].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,6)" class="celda" id="46">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[0].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,6)" class="celda" id="56">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[0].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,6)" class="celda" id="66">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[0].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">07:00-07:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,7)" class="celda" id="07">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[1].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,7)" class="celda" id="17">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[1].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,7)" class="celda" id="27">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[1].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,7)" class="celda" id="37">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[1].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,7)" class="celda" id="47">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[1].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,7)" class="celda" id="57">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[1].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,7)" class="celda" id="67">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[1].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">08:00-08:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,8)" class="celda" id="08">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[2].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,8)" class="celda" id="18">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[2].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,8)" class="celda" id="28">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[2].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,8)" class="celda" id="38">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[2].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,8)" class="celda" id="48">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[2].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,8)" class="celda" id="58">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[2].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,8)" class="celda" id="68">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[2].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">09:00-09:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,9)" class="celda" id="09">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[3].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,9)" class="celda" id="19">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[3].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,9)" class="celda" id="29">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[3].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,9)" class="celda" id="39">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[3].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,9)" class="celda" id="49">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[3].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,9)" class="celda" id="59">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[3].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,9)" class="celda" id="69">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[3].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">10:00-10:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,10)" class="celda" id="010">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[4].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,10)" class="celda" id="110">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[4].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,10)" class="celda" id="210">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[4].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,10)" class="celda" id="310">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[4].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,10)" class="celda" id="410">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[4].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,10)" class="celda" id="510">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[4].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,10)" class="celda" id="610">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[4].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">11:00-11:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,11)" class="celda" id="011">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[5].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,11)" class="celda" id="111">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[5].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,11)" class="celda" id="211">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[5].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,11)" class="celda" id="311">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[5].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,11)" class="celda" id="411">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[5].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,11)" class="celda" id="511">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[5].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,11)" class="celda" id="611">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[5].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">12:00-12:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,12)" class="celda" id="012">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[6].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,12)" class="celda" id="112">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[6].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,12)" class="celda" id="212">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[6].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,12)" class="celda" id="312">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[6].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,12)" class="celda" id="412">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[6].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,12)" class="celda" id="512">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[6].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,12)" class="celda" id="612">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[6].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">13:00-13:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,13)" class="celda" id="013">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[7].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,13)" class="celda" id="113">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[7].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,13)" class="celda" id="213">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[7].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,13)" class="celda" id="313">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[7].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,13)" class="celda" id="413">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[7].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,13)" class="celda" id="513">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[7].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,13)" class="celda" id="613">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[7].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">14:00-14:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,14)" class="celda" id="014">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[8].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,14)" class="celda" id="114">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[8].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,14)" class="celda" id="214">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[8].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,14)" class="celda" id="314">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[8].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,14)" class="celda" id="414">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[8].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,14)" class="celda" id="514">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[8].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,14)" class="celda" id="614">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[8].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">15:00-15:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,15)" class="celda" id="015">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[9].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,15)" class="celda" id="115">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[9].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,15)" class="celda" id="215">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[9].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,15)" class="celda" id="315">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[9].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,15)" class="celda" id="415">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[9].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,15)" class="celda" id="515">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[9].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,15)" class="celda" id="615">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[9].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">16:00-16:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,16)" class="celda" id="016">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[10].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,16)" class="celda" id="116">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[10].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,16)" class="celda" id="216">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[10].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,16)" class="celda" id="316">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[10].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,16)" class="celda" id="416">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[10].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,16)" class="celda" id="516">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[10].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,16)" class="celda" id="616">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[10].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">17:00-17:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,17)" class="celda" id="017">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[11].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,17)" class="celda" id="117">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[11].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,17)" class="celda" id="217">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[11].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,17)" class="celda" id="317">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[11].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,17)" class="celda" id="417">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[11].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,17)" class="celda" id="517">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[11].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,17)" class="celda" id="617">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[11].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">18:00-18:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,18)" class="celda" id="018">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[12].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,18)" class="celda" id="118">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[12].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,18)" class="celda" id="218">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[12].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,18)" class="celda" id="318">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[12].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,18)" class="celda" id="418">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[12].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,18)" class="celda" id="518">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[12].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,18)" class="celda" id="618">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[12].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">19:00-19:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,19)" class="celda" id="019">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[13].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,19)" class="celda" id="119">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[13].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,19)" class="celda" id="219">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[13].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,19)" class="celda" id="319">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[13].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,19)" class="celda" id="419">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[13].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,19)" class="celda" id="519">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[13].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,19)" class="celda" id="619">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[13].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">20:00-20:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,20)" class="celda" id="020">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[14].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,20)" class="celda" id="120">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[14].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,20)" class="celda" id="220">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[14].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,20)" class="celda" id="320">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[14].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,20)" class="celda" id="420">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[14].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,20)" class="celda" id="520">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[14].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,20)" class="celda" id="620">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[14].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">21:00-21:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,21)" class="celda" id="021">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[15].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,21)" class="celda" id="121">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[15].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,21)" class="celda" id="221">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[15].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,21)" class="celda" id="321">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[15].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,21)" class="celda" id="421">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[15].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,21)" class="celda" id="521">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[15].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,21)" class="celda" id="621">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[15].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">22:00-22:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,22)" class="celda" id="022">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[16].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,22)" class="celda" id="122">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[16].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,22)" class="celda" id="222">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[16].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,22)" class="celda" id="322">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[16].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,22)" class="celda" id="422">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[16].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,22)" class="celda" id="522">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[16].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,22)" class="celda" id="622">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[16].h}}</p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" style="background-color:#22304D">
+                    <p class="text-center text-white text-break">23:00-23:50</p>
+                </th>
+                <th (click)="EliminarAsignatura(0,23)" class="celda" id="023">
+                    <p class="text-center text-white text-break">{{horarioAux[0].lunes[17].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(1,23)" class="celda" id="123">
+                    <p class="text-center text-white text-break">{{horarioAux[1].martes[17].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(2,23)" class="celda" id="223">
+                    <p class="text-center text-white text-break">{{horarioAux[2].miercoles[17].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(3,23)" class="celda" id="323">
+                    <p class="text-center text-white text-break">{{horarioAux[3].jueves[17].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(4,23)" class="celda" id="423">
+                    <p class="text-center text-white text-break">{{horarioAux[4].viernes[17].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(5,23)" class="celda" id="523">
+                    <p class="text-center text-white text-break">{{horarioAux[5].sabado[17].h}}</p>
+                </th>
+                <th (click)="EliminarAsignatura(6,23)" class="celda" id="623">
+                    <p class="text-center text-white text-break">{{horarioAux[6].domingo[17].h}}</p>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

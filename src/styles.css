@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/*Clases genericas*/
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: inherit; 
+    font-weight: 500; 
+}
+.ng-invalid:not(form){
+    border-left:5px solid red;
+}
+
+.ng-valid:not(form){
+    border-left:5px solid rgb(23, 1, 75);
+}

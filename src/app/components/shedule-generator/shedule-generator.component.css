@@ -1,0 +1,11 @@
+.celda:hover {
+    background-color: lightslategrey;
+    cursor: url("/assets/x.png"), auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.table-responsive {
+    display: table !important;
+}
